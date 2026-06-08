@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "simpleworldsync",
+  "version": "${version}",
+  "name": "Simple World Sync",
+  "description": "Client-side world archive and restore helper for syncing singleplayer worlds through a local shared folder.",
+  "authors": [
+    "maronamo"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "ru.maronamo.simpleworldsync.SimpleWorldSyncClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "~1.21.1",
+    "java": ">=21"
+  }
+}
