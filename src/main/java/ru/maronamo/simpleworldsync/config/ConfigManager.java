@@ -17,11 +17,15 @@ public final class ConfigManager {
 
     private final Path configPath;
     private final Path localMetadataDir;
+    private final Path localManifestDir;
+    private final Path localStatePath;
     private SimpleWorldSyncConfig config = new SimpleWorldSyncConfig();
 
     private ConfigManager(Path configPath) {
         this.configPath = configPath;
         this.localMetadataDir = configPath.getParent().resolve("simpleworldsync-worlds");
+        this.localManifestDir = configPath.getParent().resolve("simpleworldsync-manifests");
+        this.localStatePath = configPath.getParent().resolve("simpleworldsync-state.json");
     }
 
     public static ConfigManager create() {
@@ -33,6 +37,7 @@ public final class ConfigManager {
         try {
             Files.createDirectories(configPath.getParent());
             Files.createDirectories(localMetadataDir);
+            Files.createDirectories(localManifestDir);
 
             if (!Files.exists(configPath)) {
                 save();
@@ -56,6 +61,7 @@ public final class ConfigManager {
         try {
             Files.createDirectories(configPath.getParent());
             Files.createDirectories(localMetadataDir);
+            Files.createDirectories(localManifestDir);
             try (Writer writer = Files.newBufferedWriter(configPath, StandardCharsets.UTF_8)) {
                 GSON.toJson(config, writer);
             }
@@ -74,6 +80,14 @@ public final class ConfigManager {
 
     public Path getLocalMetadataDir() {
         return localMetadataDir;
+    }
+
+    public Path getLocalManifestDir() {
+        return localManifestDir;
+    }
+
+    public Path getLocalStatePath() {
+        return localStatePath;
     }
 
     public void setSyncFolder(String syncFolder) {

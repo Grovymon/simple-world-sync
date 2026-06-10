@@ -2,6 +2,7 @@
 build/
 out/
 run/
+work/
 
 *.class
 *.log

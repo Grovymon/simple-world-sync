@@ -25,6 +25,10 @@ public final class ExclusionMatcher {
         }
 
         private boolean matches(String relativePath) {
+            if (glob.startsWith("**/") && relativePath.equals(glob.substring(3))) {
+                return true;
+            }
+
             if (!glob.contains("/") && relativePath.endsWith("/" + glob)) {
                 return true;
             }

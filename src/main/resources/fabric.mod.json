@@ -3,18 +3,25 @@
   "id": "simpleworldsync",
   "version": "${version}",
   "name": "Simple World Sync",
-  "description": "Client-side world archive and restore helper for syncing singleplayer worlds through a local shared folder.",
+  "description": "Simple World Sync is a client-side Fabric mod that synchronizes singleplayer Minecraft worlds between devices through a local sync folder, NAS, cloud-drive folder, or any filesystem-backed storage.",
   "authors": [
-    "maronamo"
+    "Grovymon"
   ],
-  "contact": {},
+  "contact": {
+    "sources": "https://github.com/Grovymon/simple-world-sync",
+    "issues": "https://github.com/Grovymon/simple-world-sync/issues"
+  },
   "license": "MIT",
+  "icon": "assets/simpleworldsync/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
       "ru.maronamo.simpleworldsync.SimpleWorldSyncClient"
     ]
   },
+  "mixins": [
+    "simpleworldsync.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=0.16.0",
     "fabric-api": "*",
