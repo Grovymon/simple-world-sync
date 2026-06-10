@@ -12,10 +12,10 @@ Simple World Sync — клиентский Fabric-мод для Minecraft, ко�
 
 Например:
 
-- ПК ↔ NAS ↔ Steam Deck
-- ПК ↔ Google Drive
-- ПК ↔ Яндекс Диск
-- ПК ↔ любая локальная папка, которую синхронизирует стороннее приложение
+* ПК ↔ NAS ↔ другое устройство (ПК, Steam Deck)
+* ПК ↔ Google Drive ↔ другое устройство (ПК, Steam Deck)
+* ПК ↔ Яндекс Диск ↔ другое устройство (ПК, Steam Deck)
+* ПК ↔ любая локальная папка синхронизации ↔ другое устройство (ПК, Steam Deck)
 
 Мод рассчитан на Minecraft `1.21.1`, Fabric Loader и Java `21`.
 
@@ -35,11 +35,11 @@ Simple World Sync — клиентский Fabric-мод для Minecraft, ко�
 
 Пользователь выбирает папку, например:
 
-- сетевую папку NAS;
-- папку Syncthing;
-- папку Google Drive;
-- папку Яндекс Диска;
-- любую другую локальную папку.
+* сетевую папку NAS;
+* папку Syncthing;
+* папку Google Drive;
+* папку Яндекс Диска;
+* любую другую локальную папку.
 
 После этого мод может синхронизировать выбранные одиночные миры через эту папку.
 
@@ -48,39 +48,38 @@ Simple World Sync — клиентский Fabric-мод для Minecraft, ко�
 ↓
 папка синхронизации / NAS / облачный диск
 ↓
-Steam Deck или другой ПК
+другое устройство (ПК, Steam Deck)
 ```
 
 Для синхронизации мод использует:
 
-- `worldId` для определения конкретного мира;
-- `manifest.json` для списка файлов;
-- инкрементальную синхронизацию;
-- копирование только новых, изменённых и удалённых файлов;
-- прогресс-экран;
-- защиту от конфликтов;
-- lock-файлы для защиты от одновременной записи.
+* `worldId` для определения конкретного мира;
+* `manifest.json` для списка файлов;
+* инкрементальную синхронизацию;
+* копирование только новых, изменённых и удалённых файлов;
+* прогресс-экран;
+* защиту от конфликтов;
+* lock-файлы для защиты от одновременной записи.
 
 ### Возможности
 
-- синхронизация одиночных миров между устройствами;
-- работа через обычную папку, NAS или папку облачного диска;
-- автоматическая проверка перед запуском мира;
-- автоматическая выгрузка после выхода из мира;
-- инкрементальная синхронизация по файлам;
-- прогресс-экран с процентами, скоростью и оставшимся временем;
-- поддержка включения и отключения синхронизации для отдельного мира;
-- отображение синхронизируемых миров в списке;
-- обнаружение миров, которые есть только на сервере;
-- возможность скачать мир на устройство;
-- возможность удалить серверную копию мира из папки синхронизации;
-- исключение мусорных и опасных файлов из синхронизации:
+* синхронизация одиночных миров между устройствами;
+* работа через обычную папку, NAS или папку облачного диска;
+* автоматическая проверка перед запуском мира;
+* автоматическая выгрузка после выхода из мира;
+* инкрементальная синхронизация по файлам;
+* прогресс-экран с процентами, скоростью и оставшимся временем;
+* поддержка включения и отключения синхронизации для отдельного мира;
+* отображение синхронизируемых миров в списке;
+* обнаружение миров, которые есть только на сервере;
+* возможность скачать мир на устройство;
+* возможность удалить серверную копию мира из папки синхронизации;
+* исключение мусорных и опасных файлов из синхронизации:
 
-  - `session.lock`
-  - `.git`
-  - Distant Horizons SQLite-файлы
-
-- защита от одновременной записи через lock-файл.
+  * `session.lock`
+  * `.git`
+  * Distant Horizons SQLite-файлы;
+* защита от одновременной записи через lock-файл.
 
 ### Установка
 
@@ -105,28 +104,28 @@ Prism Launcher → Instance → Edit → Mods → Add File
 5. Нажмите `Синхронизировать этот мир`.
 6. После этого мод будет автоматически:
 
-   - проверять актуальность мира перед запуском;
-   - скачивать изменения при необходимости;
-   - выгружать изменения после выхода из мира.
+   * проверять актуальность мира перед запуском;
+   * скачивать изменения при необходимости;
+   * выгружать изменения после выхода из мира.
 
 Если мир есть только в папке синхронизации, мод покажет его как облачный мир. Такой мир можно скачать на устройство или удалить серверную копию из папки синхронизации.
 
 ### Важно
 
-- Не запускайте один и тот же мир одновременно на двух устройствах.
-- Дождитесь завершения синхронизации перед запуском мира на другом устройстве.
-- Перед первым использованием сделайте ручную резервную копию мира.
-- NAS или облачная папка должны быть доступны до запуска Minecraft.
-- Если используется Google Drive, Яндекс Диск, Syncthing или похожий инструмент, дождитесь окончания их собственной синхронизации.
-- Мод не является официальным продуктом Mojang/Microsoft.
+* Не запускайте один и тот же мир одновременно на двух устройствах.
+* Дождитесь завершения синхронизации перед запуском мира на другом устройстве.
+* Перед первым использованием сделайте ручную резервную копию мира.
+* NAS или облачная папка должны быть доступны до запуска Minecraft.
+* Если используется Google Drive, Яндекс Диск, Syncthing или похожий инструмент, дождитесь окончания их собственной синхронизации.
+* Мод не является официальным продуктом Mojang/Microsoft.
 
 ### Ограничения
 
-- мод рассчитан на одиночные миры;
-- мод не заменяет полноценный сервер Minecraft;
-- конфликтные изменения нужно решать вручную;
-- синхронизация зависит от доступности выбранной папки, NAS или облачного клиента;
-- большие миры всё равно могут синхронизироваться долго при первом запуске.
+* мод рассчитан на одиночные миры;
+* мод не заменяет полноценный сервер Minecraft;
+* конфликтные изменения нужно решать вручную;
+* синхронизация зависит от доступности выбранной папки, NAS или облачного клиента;
+* большие миры всё равно могут синхронизироваться долго при первом запуске.
 
 ### Обратная связь
 
@@ -134,29 +133,13 @@ Prism Launcher → Instance → Edit → Mods → Add File
 
 Можно создавать Issue на GitHub и описывать:
 
-- что именно не работает;
-- какая версия Minecraft и Fabric используется;
-- какая ОС и устройство используются;
-- как настроена папка синхронизации;
-- что ожидалось и что произошло на самом деле.
+* что именно не работает;
+* какая версия Minecraft и Fabric используется;
+* какая ОС и устройство используются;
+* как настроена папка синхронизации;
+* что ожидалось и что произошло на самом деле.
 
 Предложения по новым функциям тоже приветствуются.
-
-Если у вас есть предложения по изменению или доработке мода — создавайте Issue на GitHub. Буду рад идеям, баг-репортам и предложениям.
-
-### Сборка из исходников
-
-```powershell
-git clone https://github.com/Grovymon/simple-world-sync.git
-cd simple-world-sync
-.\gradlew.bat build
-```
-
-Готовый jar:
-
-```text
-build/libs/simple-world-sync-0.1.0.jar
-```
 
 ## English
 
@@ -166,10 +149,10 @@ Simple World Sync is a client-side Fabric mod for Minecraft `1.21.1` that helps 
 
 Examples:
 
-- PC ↔ NAS ↔ Steam Deck
-- PC ↔ Google Drive
-- PC ↔ Yandex Disk
-- PC ↔ any local folder synchronized by another application
+* PC ↔ NAS ↔ another device (PC, Steam Deck)
+* PC ↔ Google Drive ↔ another device (PC, Steam Deck)
+* PC ↔ Yandex Disk ↔ another device (PC, Steam Deck)
+* PC ↔ any local sync folder ↔ another device (PC, Steam Deck)
 
 The mod targets Minecraft `1.21.1`, Fabric Loader, and Java `21`.
 
@@ -189,11 +172,11 @@ The mod does not use its own server, GitHub API, or an external cloud service. I
 
 You choose a sync folder, for example:
 
-- a NAS network folder;
-- a Syncthing folder;
-- a Google Drive folder;
-- a Yandex Disk folder;
-- any other local folder.
+* a NAS network folder;
+* a Syncthing folder;
+* a Google Drive folder;
+* a Yandex Disk folder;
+* any other local folder.
 
 After that, the mod can synchronize selected singleplayer worlds through this folder.
 
@@ -202,39 +185,38 @@ PC
 ↓
 sync folder / NAS / cloud drive
 ↓
-Steam Deck or another PC
+another device (PC, Steam Deck)
 ```
 
 The mod uses:
 
-- `worldId` to identify a specific world;
-- `manifest.json` to track world files;
-- incremental file-based synchronization;
-- copying only new, changed, and deleted files;
-- a progress screen;
-- conflict protection;
-- lock files to protect against simultaneous writes.
+* `worldId` to identify a specific world;
+* `manifest.json` to track world files;
+* incremental file-based synchronization;
+* copying only new, changed, and deleted files;
+* a progress screen;
+* conflict protection;
+* lock files to protect against simultaneous writes.
 
 ### Features
 
-- synchronize singleplayer worlds between devices;
-- works through a normal folder, NAS, or cloud-drive folder;
-- automatic check before launching a world;
-- automatic upload after leaving a world;
-- incremental file-based synchronization;
-- progress screen with percentage, speed, and estimated time remaining;
-- enable or disable sync per world;
-- synced-world indicator in the world list;
-- detection of worlds that exist only in the sync folder;
-- download a remote world to the current device;
-- delete a server-side or remote copy from the sync folder;
-- excludes unsafe or unnecessary files:
+* synchronize singleplayer worlds between devices;
+* works through a normal folder, NAS, or cloud-drive folder;
+* automatic check before launching a world;
+* automatic upload after leaving a world;
+* incremental file-based synchronization;
+* progress screen with percentage, speed, and estimated time remaining;
+* enable or disable sync per world;
+* synced-world indicator in the world list;
+* detection of worlds that exist only in the sync folder;
+* download a remote world to the current device;
+* delete a server-side or remote copy from the sync folder;
+* excludes unsafe or unnecessary files:
 
-  - `session.lock`
-  - `.git`
-  - Distant Horizons SQLite files
-
-- lock-file protection against simultaneous writes.
+  * `session.lock`
+  * `.git`
+  * Distant Horizons SQLite files;
+* lock-file protection against simultaneous writes.
 
 ### Installation
 
@@ -259,28 +241,28 @@ Prism Launcher → Instance → Edit → Mods → Add File
 5. Click `Sync this world`.
 6. After that, the mod will automatically:
 
-   - check the world before launch;
-   - download changes when needed;
-   - upload changes after leaving the world.
+   * check the world before launch;
+   * download changes when needed;
+   * upload changes after leaving the world.
 
 If a world exists only in the sync folder, the mod shows it as a remote world. You can download it to the current device or delete its server-side copy from the sync folder.
 
 ### Important notes
 
-- Do not open the same world on two devices at the same time.
-- Wait for synchronization to finish before launching the world on another device.
-- Make a manual backup before first use.
-- Your NAS or cloud-drive folder must be available before launching Minecraft.
-- If you use Google Drive, Yandex Disk, Syncthing, or similar tools, wait until their own synchronization finishes.
-- This mod is not an official Mojang/Microsoft product.
+* Do not open the same world on two devices at the same time.
+* Wait for synchronization to finish before launching the world on another device.
+* Make a manual backup before first use.
+* Your NAS or cloud-drive folder must be available before launching Minecraft.
+* If you use Google Drive, Yandex Disk, Syncthing, or similar tools, wait until their own synchronization finishes.
+* This mod is not an official Mojang/Microsoft product.
 
 ### Limitations
 
-- designed for singleplayer worlds;
-- not a replacement for a Minecraft server;
-- sync conflicts may require manual decisions;
-- synchronization depends on the availability of the selected folder, NAS, or cloud client;
-- large worlds may still take time during the first sync.
+* designed for singleplayer worlds;
+* not a replacement for a Minecraft server;
+* sync conflicts may require manual decisions;
+* synchronization depends on the availability of the selected folder, NAS, or cloud client;
+* large worlds may still take time during the first sync.
 
 ### Feedback
 
@@ -288,22 +270,8 @@ If you have ideas, suggestions, bug reports, or feature requests, feel free to o
 
 When reporting a problem, please include:
 
-- what exactly does not work;
-- your Minecraft and Fabric versions;
-- your operating system and device;
-- how the sync folder is configured;
-- what you expected to happen and what happened instead.
-
-### Building from source
-
-```powershell
-git clone https://github.com/Grovymon/simple-world-sync.git
-cd simple-world-sync
-.\gradlew.bat build
-```
-
-Jar:
-
-```text
-build/libs/simple-world-sync-0.1.0.jar
-```
+* what exactly does not work;
+* your Minecraft and Fabric versions;
+* your operating system and device;
+* how the sync folder is configured;
+* what you expected to happen and what happened instead.
