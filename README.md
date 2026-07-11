@@ -1,4 +1,4 @@
-# 🌍 Simple World Sync
+# 🌍 Simple World Sync MINECRAFT 1.21.1
 
 > Synchronize your Minecraft worlds between devices — automatically and without hassle.
 
