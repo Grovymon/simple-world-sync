@@ -13,7 +13,7 @@
 **Simple World Sync** — клиентский Fabric-мод для Minecraft, который синхронизирует одиночные миры между устройствами.
 
 💡 **Ключевая особенность:**  
-мод работает **напрямую через API Яндекс Диска**, без папок синхронизации и сторонних программ.
+мод работает **напрямую через NAS или API GOOGLE disk/Яндекс Диска**, без папок синхронизации и сторонних программ.
 
 ---
 
@@ -27,7 +27,7 @@
 
 ### ✨ Возможности
 
-- ☁️ прямая синхронизация через Яндекс Диск API  
+- ☁️ прямая синхронизация через NAS или облако
 - 🔐 безопасная OAuth-авторизация (без логина/пароля в игре)  
 - 🔄 инкрементальная синхронизация (только изменённые файлы)  
 - 📤 автоматическая выгрузка при выходе из мира  
@@ -51,7 +51,7 @@
 ### 📁 Где хранятся миры
 /SimpleWorldSync
 
-в вашем Яндекс Диске.
+в вашем Яндекс Диске или гугл диск.
 
 ---
 
@@ -78,14 +78,14 @@
 **Simple World Sync** is a client-side Fabric mod for Minecraft that syncs singleplayer worlds between devices.
 
 💡 **Key feature:**  
-works **directly via Yandex Disk API**, without sync folders or external tools.
+works **directly via Yandex Disk API or Google disk**, without sync folders or external tools.
 
 ---
 
 ### 🚀 How it works
 PC
 ↓
-Yandex Disk (API)
+Yandex Disk/Google disk (API)
 ↓
 another device
 
@@ -109,7 +109,7 @@ another device
 
 ### 🔐 Authentication
 
-1. Click **Login with Yandex**
+1. Click **Login with Yandex or Google disk**
 2. Browser opens
 3. Confirm access
 4. Done
