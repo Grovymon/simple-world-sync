@@ -29,8 +29,6 @@
 
 ### 🧠 Почему появился этот мод
 
-Мод создавался при помощи нейросети. Я понимаю, что для кого-то это может звучать не очень убедительно, но на полноценное изучение разработки Minecraft-модов на Java у меня ушло бы очень много времени.
-
 Мне был нужен простой и понятный мод для личной задачи: синхронизировать одиночные миры Minecraft между моим NAS-сервером, компьютером и Steam Deck.
 
 Изначально была идея использовать **MineGIT**, но с ним возникли сложности: блокировки в РФ, проблемы с доступом к GitHub/Gitea, HTTPS-сертификатами и общей настройкой.
@@ -42,8 +40,6 @@
 ---
 
 ### ⚙️ Как это работает
-
-Мод не использует собственный сервер, GitHub API или внешнее облако. Вместо этого он работает с обычной папкой синхронизации.
 
 Пользователь выбирает папку, например:
 
@@ -189,8 +185,6 @@ The mod targets:
 ---
 
 ### 🧠 Why this mod exists
-
-This mod was created with the help of AI. I understand that this may not sound ideal to everyone, but learning Minecraft mod development in Java from scratch would take a lot of time.
 
 I needed a simple tool for my own use case: synchronizing singleplayer Minecraft worlds between my NAS server, PC, and Steam Deck.
 
