@@ -425,3 +425,9 @@ When opening an Issue, include:
 - exact steps to reproduce;
 - expected and actual behavior;
 - a relevant log excerpt without OAuth tokens.
+
+---
+
+## Community / Сообщество
+
+💬 **[Join the Discord server / Присоединиться к Discord-серверу](https://discord.gg/gUPsQCnTeN)**
